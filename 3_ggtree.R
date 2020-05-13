@@ -63,13 +63,6 @@ decision <- split(x = assignments, f = assignments$decision)
 full_tree <- read.nexus(paste0(here(),"/RAxML/ni277/RAxML_bipartitions.nex"))
 full_tree <- ladderize(full_tree) ## Ladderize tree.
 
-## Rotating a couple nodes:
-#full_tree %<>% ape::rotate(phy = full_tree, node = 313)
-#full_tree %<>% ape::rotate(phy = full_tree, node = 377)
-
-getDescendants(full_tree, 313)
-getDescendants(full_tree, 377)
-
 ## Assigning colors to tree terminals. For now we're going to set them all as "black".
 color_tips <- data.frame(ID = full_tree$tip.label, color = "black")
 
@@ -81,7 +74,7 @@ color_tips$color <- as.character(color_tips$color)
 color_tips$color[color_tips$ID %in% tips_not_in_sNMF] <- "#FF3333"
 
 ## Now changing the color of outgroups to gray:
-color_tips[1:11, "color"] <- "gray30"
+color_tips[1:11, "color"] <- "blue"
 
 ## Defining color scheme for clade labels on tree plot:
 #clade_colors <- palette_list[[3]] ## For 15 clusters.
@@ -102,16 +95,6 @@ for (n in 1:length(decision)){
 
   } ## Close loop (node values).
 
-## Find a couple nodes that correpond to paraphyletic clusters to rotate in tree plot:
-#rotate_1 <- rbind(decision$`essingtonii 2`, decision$`essingtonii 1b`)
-#rotate_1 <- get_mrca_of_set(tree = full_tree, descendants = as.vector(rotate_1$ID))
-rotate_1 <- get_mrca_of_set(tree = full_tree, descendants = c("NA_NEB008_Ct_essi", "NA_K073_Ct_essi"))
-rotate_2 <- get_mrca_of_set(tree = full_tree, descendants = c("WAMR_126015_Ct_rima", "AMSR_111494_Ct_spal"))
-#get_mrca_of_set(tree = full_tree, descendants = c("WAMR_126015_Ct_rima", "WAMR_126010_Ct_rima"))
-#get_mrca_of_set(tree = full_tree, descendants = c("AMSR_111493_Ct_spal", "AMSR_111494_Ct_spal"))
-#get_mrca_of_set(tree = full_tree, descendants = as.vector(decision$`essintonii 2`$ID))
-#get_mrca_of_set(tree = full_tree, descendants = as.vector(decision$`essingtonii 1b`$ID))
-
 ## PART 3: Plotting tree.
 
 ## Creating new tree plot object with ggtree:
@@ -124,9 +107,9 @@ tree_plot <- tree_plot + geom_tiplab(size = 4, color = color_tips$color) ## Chan
 tree_plot <- tree_plot + theme(plot.margin = unit(c(t = -2, r = 0, b = -2, l = 0), "in"))
 #labs(x = NULL, y = NULL)
 
-## Flip nodes of spaldingi 2a and rimacola:
-tree_plot <- flip(tree_plot, node1 = 378, node2 = 379)
-tree_plot <- flip(tree_plot, node1 = 314, node2 = 319)
+## Flip nodes of to approximate non-sister clades that correspond to the same sNMF cluster:
+tree_plot <- flip(tree_plot, node1 = 378, node2 = 379) ## essingtonii 1b and essingtonii  2.
+tree_plot <- flip(tree_plot, node1 = 314, node2 = 319) ## spaldingi 2a and rimacola.
 
 ## Adding bars to each clade over a loop:
 for (n in 1:length(cluster_nodes)){ 
