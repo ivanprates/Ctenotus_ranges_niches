@@ -1,2 +1,2 @@
 # C_inornatus_gr
-R scripts associated with an ongoing research project.
+Scripts associated with an ongoing research project on Australian skinks.
