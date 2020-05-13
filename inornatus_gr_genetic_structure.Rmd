@@ -1,0 +1,132 @@
+---
+params:
+  Taxon: "Ctenotus inornatus"
+title:  Genetic structure in the *`r params$Taxon`* group
+author: "Ivan Prates, University of Michigan"
+#date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+This R Markdown file presents a brief overview of methods and the results of a few genetic structure analyses for the _Ctenotus inornatus_ species group.
+
+### Specimen sampling
+
+For phylogenetic and genetic structure analyses in the _Ctenotus inornatus_ species group, I assembled a dataset composed of 270 ingroup and 11 outgroup samples. The choice of ingroup and outgroup species was informed by the results of previous phylogenetic analyses performed by Sonal based on both ddRAD loci and ultraconserved genomic regions.
+
+This dataset includes samples assigned to the following taxa (by the time of their collection): _C. arnhemensis_,   _C. borealis_, _C. brachyonyx_, _C. coggeri_, _C. decaneurus_, _C. essingtonii_, _C. eutaenius_, _C. fallens_, _C. helenae_, _C. inornatus_, _C. joanae_, _C. lateralis_, _C. leae_, _C. mastigura_, _C. robustus_, _C. saxatilis_, _C. severus_, _C. spaldingi_, _C. vertebralis_, and a few samples not assigned to any species ("sp."). Several of these taxon names are not valid today. This is the case, for instance, of _C. helenae_, _C. saxatilis_, _C. severus_, _C. fallens_, and _C. brachyonyx_, now synonymized with _C. inornatus_ (Rabosky et al. 2014 MPE).
+
+Outgroup samples correspond to the following species: _C. agrestis_, _C. arcanus_, _C. ingrami_, _C. quinkan_, and _C. taeniolatus_. I had previously included samples from the _C. duricola_ clade as additional outgroups, but decided they were not really necessary.
+
+### Phylogenetic analyses
+
+Following data assembly using _ipyrad_ in the Great Lakes HPC, I started by running exploratory phylogenetic analyses using RAxML.
+
+These analyses were useful to flag (and exclude) four samples that never clustered with their presumed conspecifics and which I cannot confidently assign to any taxon: NA_CCM4743_Ct_vert, NA_CCM6484_Ct_deca, SAMR_36241_Ct_hele, WAMR_102472_Ct_hele. These samples may have undergone cross-contamination during library preparation.
+
+Below (Fig. 1) I show a tree based on 14,570 concatenated SNPs, each SNP present in at least 50% of the 277 sampled individuals. Samples indicated in blue correspond to the outgroups; samples indicated in red have high levels of missing data and were excluded from downstream generic structure analyses. I also added bars indicating genetic clusters inferred by clustering analyses (presented in detail further below). Non-sister clades that correspond to the same genetic cluster are indicated with lowercase letters (e.g., _essingtonii 1a_ and _1b_).
+
+<center>
+
+![_**Fig. 1.** Phylogenetic relationships in the _Ctenotus inornatus_ species group inferred using RAxML based on 14,570 concatenated SNPs._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/ggtree/RAxML_n277_putative_clusters.pdf)
+
+</center>
+
+The results of RAxML analyses largely reflect Sonal's previous results and earlier multi-locus analyses (e.g., Rabosky et al. 2014 MPE). _Ctenotus decaneurus_ was inferred as deeply nested in the _inornatus_ group. _Ctenotus regius_ and _C. brevipes_ were also found nested within the group; unfortunately, both species are represented by a single individual with high levels of missing data. The two samples of _C. rimacola_ grouped with two samples of _C. spaldingi_, which makes the genetic cluster _spaldingi 2_ paraphyletic. 
+
+Most species are monophyletic. One remarkable exception is _C. robustus_; samples originally assigned to this taxon correspond to at least two, and perhaps three, non-sister clusters. Samples assigned to _spaldingi 2_ by the clustering analyses seem to correspond to Sonal's _robustus 3_; for more on that, see clustering analyses below.
+
+I am not sure if the black clade corresponds to true _C. coggeri_ - many samples in this clade were originally identified as _C. essingtonii_.
+
+I am now thinking that allowing only 50% missing data was pretty strict, and I plan to run a new tree on a dataset with 65% missing data (matching structure analyses - see below).
+
+### Genetic sampling
+
+Before diving into descriptive analyses of genetic structure in the _C. inornatus_ group, I spent a few weeks testing how basic genetic structure analyses are affected by 242 combinations of individual-wise missing data, SNP-wise missing data, and minimum allele count - tedious work, but had to be done. To decide the best combination of these parameters, I considered what we already know about taxonomic diversity, phylogenetic relationships, and distributions in the _C. inornatus_ group.
+
+Based on these analyses, I decided to keep in the final dataset: 1) individuals that had at least 20% of all sampled SNPs, 2) SNPs with a minimum allele count of 2 (thus getting rid of singleton SNPs, which have been shown to impair inferences of population structure and demography; Linck and Battey 2019 Mol. Ecol. Res.), and 3) SNPs that are present in at least 35% of the sampled individuals. To maximize sampling of independent SNP histories, I extracted one SNP per locus. The final dataset was composed of 213 individuals and 1,537 unlinked SNPs with about 44% missing data, which is quite large for population genetic analyses.
+
+Unfortunately, this strategy led to the exclusion of 57 ingroup samples from the final dataset due to high levels of missing data (indicated in red in the phylogeny in Fig. 1). The good news is that our sampling is highly redundant and most of these samples correspond to genetic groups that are still represented by several samples in final dataset.
+
+Unfortunately, a few taxa are not represented in this final 213-sample dataset. This includes _C. brevipes_, _C. regius_, and _C. rimacola_, which have only 1 or 2 sampled individuals and high levels of missing data.
+
+### Genetic clustering analyses
+
+To infer major genetic groups and estimate individuals ancestry coefficients, I used sNMF. This method is similar to Structure but has the advantage of being model-free. ADD AN EXPLANATION HERE.
+
+Using sNMF, I tested the fit of numbers of genetic clusters (K) ranging from 1 to 30. In sNMF, the best-fit K is chosen based on cross-entropy scores, with lowest scores representing better fit.
+
+<center>
+
+![_**Fig. 2.** sNMF cross-entropy scores for different K values. Lower scores indicate better fit_. ](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_plots/mid0.8_ms0.35/mid0.8_ms0.35_a500_e0.14152_K12.png){ width=50% }
+
+</center>
+
+The plot makes it clear that the data fit a range of K values with nearly identical scores, which is not uncommon when levels of missing data are high. Fortunately, most differences between the resulting clustering schemes (i.e., under different K) involve the splitting (or merging) of the same groups. For instance, below is a plot showing the genetic clustering results for K = 14. Note that the order of samples  in the structure plots (from left to right) is the same as that in the RAxML phylogeny (from top to bottom):
+
+
+<center>
+
+![_**Fig. 3.** sNMF ancestry coefficients for K = 14. The legend indicates putative species identities corresponding to each inferred genetic cluster._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_plots/mid0.8_ms0.35/mid0.8_ms0.35_a500_e0.14167_K14.jpeg)
+
+</center>
+
+K = 14 seems to capture species diversity in the _C. inornatus_ group well, with some nominal taxa being split further. For instance, samples originally assigned to _C. spaldingi_ correspond to two major genetic clusters (light cyan and dark cyan in Fig. 3), while samples assigned to _C. robustus_ correspond to three (lime green, light green, and dark blue in Fig. 3) (I apologize for the unconventional color names - it was not trivial to come up with a color scheme to show tens of genetic clusters). The separation between _robustus 1_ and _robustus 2_ is odd, however, because samples assigned to them do not correspond to different major clades in RAxML trees (Fig. 1).
+
+It can be hard to evaluate whether these inferred clusters reflect biological reality without considering the sampling locality of individuals. Below are maps showing the ranges of sNMF clusters under the same K (= 14). The color scheme on maps follow that of sNMF structure (and PCA) plots, and the order of maps is the same as that of clusters in the corresponding sNMF plot (Fig. 3) and of clades in the RAxML tree (Fig. 1). Individuals were assigned to the genetic cluster that corresponds to the largest proportion of an individual's ancestry coefficients; note that this criterion can lead to unexpected assignments in the case of admixed samples.
+
+<center>
+
+![_**Fig. 4.**The geographic distribution of major genetic clusters inferred by sNMF under K = 14._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_maps/mid0.8_ms0.35/mid_0.8_ms0.35_a500_e0.14167_K14_map.jpeg){ width=70% }
+
+</center>
+
+Fortunately, most inferred genetic clusters are spatially coherent and occur where we would expect based on the ranges of nominal taxa. An exception are two samples assigned to the _lateralis_ cluster that were sampled in central and western Australia, far from the known range of _C. lateralis_; however, these two individuals (which were originally identified as _C. helenae_) are admixed, and they hardly correspond to true _C. lateralis_.
+
+These maps also suggest that the separation between _robustus 1_ and _robustus 2_ is likely spurious. There is no geographic separation between them, both having overlapping ranges in northwestern Australia. These two groups are lumped together by sNMF under K = 13:
+
+<center>
+
+![_**Fig. 4.** sNMF ancestry coefficients for K = 13. The legend indicates putative species identities corresponding to each inferred genetic cluster._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_plots/mid0.8_ms0.35/mid0.8_ms0.35_a500_e0.14194_K13.jpeg)
+
+</center>
+
+In this scheme (K = 13), _robustus 1_ and _robustus 2_ form a single cluster (green in Fig. 4), though sNMF still infers a separate dark blue _robustus_ cluster. Different from results for K = 14, under K = 13 samples there is a single _spaldingi_ cluster (turquoise), while samples originally assigned to _C. essingtonii_ group into two separate clusters (red and orange). The only sampled individual of _C. arnhemensis_ (gray) now groups with two samples previously assigned to the _robustus 1_ cluster. While these two _C. robustus_ samples are distantly related to _C. arnhemensis_ on the RAxML tree, all three samples occur at adjacent sites in northern Australia:
+
+<center>
+
+![_**Fig. 5.**The geographic distribution of major genetic clusters inferred by sNMF under K = 13._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_maps/mid0.8_ms0.35/mid_0.8_ms0.35_a500_e0.14194_K13_map.jpeg){ width=70% }
+
+</center>
+
+Lastly, we can also take a look at what clustering results look like under K = 15, which also performed well:
+
+<center>
+
+![_**Fig. 5.** sNMF ancestry coefficients for K = 15. The legend indicates putative species identities corresponding to each inferred genetic cluster._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_plots/mid0.8_ms0.35/mid0.8_ms0.35_a500_e0.14217_K15.jpeg)
+
+</center>
+
+This scheme (K = 15) also subdivides samples assigned to _C. robustus_ into three genetic clusters and both _C. spaldingi_ and _C. essintonii_ into two. However, _C. spaldingi_ is now split into two clusters, while _C. lateralis_ and _C. inornatus_ are clumped together (the large magenta cluster on the right side of the plot). Once again, inferred genetic clusters segregate well in geographic space:
+
+<center>
+
+![_**Fig. 8.**The geographic distribution of major genetic clusters inferred by sNMF under K = 15._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/sNMF_maps/mid0.8_ms0.35/mid_0.8_ms0.35_a500_e0.14217_K15_map.jpeg){ width=70% }
+
+</center>
+
+The sNMF results also suggest that there may be admixture across major genetic clusters. Higher admixture was inferred between potentially conspecific clusters (e.g., _spaldingi 1_ and _2_, _superciliaris 1_ and _2_) than across nominal taxa. Interesting cases of cross-taxa admixture involve _C. inornatus_ and _C. superciliaris_ in the northwest and _C. inornatus_ and _C. spaldingi_ in the east. However, it is important to keep in mind that high levels of missing data can mimic a signal of admixture in clustering analyses.
+
+Lastly, another standard way of describing patterns of genetic structure and flagging admixed samples is by plotting principal component axes derived from a principal component analysis (PCA) on the unlinked SNPs. I do not find this type of analysis to be particularly insightful, but it can be a good sanity check (and a many people think PCA is a crucial part of a popgen paper). Here is what PCA plots look like when coloring individuals by sNMF clusters under K = 14:
+
+<center>
+
+![_**Fig. 6.** Biplots of the first four principal component axes derived from a PCA. Legend and color scheme follow that of sNMF analyses for K = 14._](/home/ivan/Dropbox/Science/MYPAPERS_ongoing/Ctenotus_inornatus_group/LEA/inornatus_gr_c90_ni281_mi070/mac2/PCA/K14/K14_PCA_plots_combined.jpeg){ width=85% }
+
+</center>
+
+These PCA plots suggest that sNMF clusters largely segregate in "SNP space", which is good news. Some clustering patterns are consistent with the idea of cross-taxon admixture, as is the case of samples of _inornatus_ clustering with a chunk of _superciliaris_ (and vice-versa) or _inornatus_ grouping with _robustus 1-2_ (and vice-versa). Yet, I would expect admixed individuals to occupy intermediates portions of the SNP space as opposed to being totally nested among samples of another species. I would not be surprised if these odd cases involve samples with high levels of missing data, and I will look into that more closely.
+
+That is it for now. For downstream popgen analyses, we have to make decisions about the number of genetic clusters and individual assigments. Instead of using a single clustering scheme (say, K = 14), I think it makes sense to make decisions informed by sNMF under different K values (given their remarkably similar fit) plus the maps and phylogeny. I also think it is worth considering the most subdivided scheme as long as it is consistent across, and supported by, different sources of evidence. For instance, I would recognize the distinction between _C. spaldingi 1_ and _2_ and _C. superciliaris 1_ and _2_. I would also recognize the "dark blue" _robustus_ cluster as separate from the other _robustus_ samples, but not the distinction between _robustus 1 and 2_.
+
+Thank you!
+Ivan.
