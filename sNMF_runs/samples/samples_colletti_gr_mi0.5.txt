@@ -1,0 +1,17 @@
+CUMV_14845_Ct_calu
+NA_CCM0750_Ct_haly
+NA_CCM0751_Ct_haly
+NA_CCM0804_Ct_haly
+NA_CCM0816_Ct_haly
+NA_CCM0817_Ct_haly
+NA_CCM0820_Ct_haly
+NA_CCM1006_Ct_ehma
+NA_CCM1013_Ct_ehma
+NA_CCM1424_Ct_ehma
+NA_CCM1425_Ct_ehma
+NA_CCM4743_Ct_vert
+NA_CCM4823_Ct_stor
+NA_CCM4824_Ct_stor
+WAMR_102658_Ct_nasu
+WAMR_139414_Ct_nigr
+WAMR_157327_Ct_rufe

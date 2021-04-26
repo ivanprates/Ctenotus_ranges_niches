@@ -1,0 +1,9 @@
+cluster,taxon,Freq,label,OTU
+cluster_8,atlas,12,atlas,atlas_gr_cluster_8
+cluster_7,ariadnae,4,ariadnae,atlas_gr_cluster_7
+cluster_3,hanloni,3,hanloni,atlas_gr_cluster_3
+cluster_4,dux,19,dux,atlas_gr_cluster_4
+cluster_2,duricola,8,duricola,atlas_gr_cluster_2
+cluster_1,pallasotus,5,pallasotus,atlas_gr_cluster_1
+cluster_6,zastictus,3,zastictus,atlas_gr_cluster_6
+cluster_5,grandis,6,grandis,atlas_gr_cluster_5

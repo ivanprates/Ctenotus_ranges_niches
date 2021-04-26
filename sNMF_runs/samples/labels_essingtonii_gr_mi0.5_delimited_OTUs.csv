@@ -1,0 +1,7 @@
+cluster,taxon,Freq,label,OTU
+cluster_4,essingtonii,6,essingtonii (1),essingtonii_gr_cluster_4
+cluster_2,essingtonii,6,essingtonii (2),essingtonii_gr_cluster_2
+cluster_1,essingtonii,2,essingtonii (3),essingtonii_gr_cluster_1
+cluster_5,vertebralis,8,vertebralis,essingtonii_gr_cluster_5
+cluster_6,joanae,5,joanae,essingtonii_gr_cluster_6
+cluster_3,coggeri,5,coggeri,essingtonii_gr_cluster_3

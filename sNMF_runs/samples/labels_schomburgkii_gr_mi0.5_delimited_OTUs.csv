@@ -1,0 +1,9 @@
+cluster,taxon,Freq,label,OTU
+cluster_3,brooksi,14,brooksi,schomburgkii_gr_cluster_3
+cluster_6,euclae,6,euclae,schomburgkii_gr_cluster_6
+cluster_8,calurus,7,calurus,schomburgkii_gr_cluster_8
+cluster_2,strauchii,14,strauchii (1),schomburgkii_gr_cluster_2
+cluster_4,strauchii,7,strauchii (2),schomburgkii_gr_cluster_4
+cluster_1,zebrilla,5,zebrilla,schomburgkii_gr_cluster_1
+cluster_7,schomburgkii,18,schomburgkii (1),schomburgkii_gr_cluster_7
+cluster_5,schomburgkii,11,schomburgkii (2),schomburgkii_gr_cluster_5

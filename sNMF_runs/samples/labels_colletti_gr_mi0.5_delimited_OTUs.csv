@@ -1,0 +1,5 @@
+cluster,taxon,Freq,label,OTU
+cluster_2,halysis,6,halysis,colletti_gr_cluster_2
+cluster_1,ehmanni,2,ehmanni,colletti_gr_cluster_1
+cluster_4,nasutus,2,nasutus,colletti_gr_cluster_4
+cluster_3,storri,3,storri,colletti_gr_cluster_3

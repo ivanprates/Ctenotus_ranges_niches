@@ -1,0 +1,10 @@
+cluster,taxon,Freq,label,OTU
+cluster_2,inornatus,37,inornatus (1),inornatus_gr_cluster_2
+cluster_5,lateralis,14,lateralis,inornatus_gr_cluster_5
+cluster_8,inornatus,9,inornatus (2),inornatus_gr_cluster_8
+cluster_4,superciliaris,14,superciliaris (1),inornatus_gr_cluster_4
+cluster_1,superciliaris,7,superciliaris (2),inornatus_gr_cluster_1
+cluster_9,mastigura,13,mastigura,inornatus_gr_cluster_9
+cluster_6,spaldingi,16,spaldingi (1),inornatus_gr_cluster_6
+cluster_7,spaldingi,13,spaldingi (2),inornatus_gr_cluster_7
+cluster_3,robustus,16,robustus,inornatus_gr_cluster_3

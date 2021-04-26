@@ -1,0 +1,10 @@
+cluster,taxon,Freq,label
+cluster_2,inornatus,37,inornatus (1)
+cluster_5,lateralis,14,lateralis
+cluster_8,inornatus,9,inornatus (2)
+cluster_4,superciliaris,14,superciliaris (1)
+cluster_1,superciliaris,7,superciliaris (2)
+cluster_9,mastigura,13,mastigura
+cluster_6,spaldingi,16,spaldingi (1)
+cluster_7,spaldingi,13,spaldingi (2)
+cluster_3,robustus,16,robustus

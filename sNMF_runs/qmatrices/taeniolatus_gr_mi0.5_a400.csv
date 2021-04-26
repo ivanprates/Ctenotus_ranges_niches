@@ -1,0 +1,9 @@
+"ID","cluster_1","cluster_2","cluster_assign","coeff","TISSUE_ID","REGO","VOUCHER","ALTERNATIVE_ID","GENUS","SPECIES","UPDATED_SP","REGION","LOCATION","STATE","LAT","LON","VoucherNotes"
+"SAMAR_33571_Ct_taen",0.9999,1e-04,"cluster_1",0.9999,"ABTC3723",NA,"SAMAR_33571",NA,"Ctenotus","taeniolatus","taeniolatus","Australia","21k W Narrabrai","NSW",-30.16667,149.9333,NA
+"SAMAR_33727_Ct_taen",0.974375,0.0256247,"cluster_1",0.974375,"ABTC4010",NA,"SAMAR_33727",NA,"Ctenotus","taeniolatus","taeniolatus","Australia","Denman tip","NSW",-32.38333,150.6833,NA
+"SAMAR_34743_Ct_taen",0.9999,1e-04,"cluster_1",0.9999,"ABTC16639",NA,"SAMAR_34743",NA,"Ctenotus","taeniolatus","taeniolatus","Australia","Bolivia Hill","NSW",-29.33333,151.9,NA
+"SAMAR_55603_Ct_taen",0.9999,1e-04,"cluster_1",0.9999,"ABTC76929","SAMAR55603","SAMAR_55603",NA,"Ctenotus","taeniolatus","taeniolatus","Australia","Kroombit SF","QLD",-24.32583,150.9403,NA
+"SAMAR_55863_Ct_taen",0.991959,0.00804072,"cluster_1",0.991959,"ABTC77182","SAMAR55863","SAMAR_55863",NA,"Ctenotus","taeniolatus","taeniolatus","Australia","Cairns N side Lily Creek","QLD",-16.93333,145.7667,NA
+"SAMAR_55882_Ct_taen",0.9999,1e-04,"cluster_1",0.9999,"ABTC77206","SAMAR55882","SAMAR_55882",NA,"Ctenotus","taeniolatus","taeniolatus","Australia","69k S Alpha on Alpha to Tambo Road","QLD",-24.1975,146.5508,NA
+"SAMR_55637_Ct_arca",1e-04,0.9999,"cluster_2",0.9999,"ABTC76936","SAM55637","SAMR_55637","ARCAA76936","Ctenotus","arcanus","arcanus","Australia","Kroombit Tops forestry hut","QLD",-24.357,150.960556,NA
+"SAMR_55638_Ct_arca",1e-04,0.9999,"cluster_2",0.9999,"ABTC76937","SAM55638","SAMR_55638","ARCAA76937","Ctenotus","arcanus","arcanus","Australia","Kroombit Tops forestry hut","QLD",-24.357,150.960556,NA

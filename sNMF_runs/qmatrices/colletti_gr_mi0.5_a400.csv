@@ -1,0 +1,18 @@
+"ID","cluster_1","cluster_2","cluster_3","cluster_4","cluster_assign","coeff","TISSUE_ID","REGO","VOUCHER","ALTERNATIVE_ID","GENUS","SPECIES","UPDATED_SP","REGION","LOCATION","STATE","LAT","LON","VoucherNotes"
+"CUMV_14845_Ct_calu",9.998e-05,9.998e-05,9.998e-05,0.9997,"cluster_4",0.9997,"DLR0287","CU14845","CUMV_14845","CALUDLR0287","Ctenotus","calurus","nasutus","Australia","Yamarna Stn, Western Australia","WA",-28.133,123.8667,NA
+"NA_CCM0750_Ct_haly",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","halysis","halysis","Australia","Old Mitchell Road","WA",-15.1276,126.1352,NA
+"NA_CCM0751_Ct_haly",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","halysis","halysis","Australia","Old Mitchell Road","WA",-15.1276,126.1352,NA
+"NA_CCM0804_Ct_haly",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","halysis","halysis","Australia","Old Mitchell - Q5","WA",-15.1328,126.1478,NA
+"NA_CCM0816_Ct_haly",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","halysis","halysis","Australia","Old Mitchell - Q5","WA",-15.1328,126.1478,NA
+"NA_CCM0817_Ct_haly",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","halysis","halysis","Australia","Old Mitchell - Q5","WA",-15.1328,126.1478,NA
+"NA_CCM0820_Ct_haly",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","halysis","halysis","Australia","Old Mitchell - Q6","WA",-15.1361,126.1523,NA
+"NA_CCM1006_Ct_ehma",0.9997,9.998e-05,9.998e-05,9.998e-05,"cluster_1",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","ehmanni","ehmanni","Australia","Mud Springs, Site 1 Sandstone, 20km SW Theda HS","WA",-14.88556,126.35986,NA
+"NA_CCM1013_Ct_ehma",0.9997,9.998e-05,9.998e-05,9.998e-05,"cluster_1",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","ehmanni","ehmanni","Australia","Mud Springs, Site 1 Sandstone, 20km SW Theda HS","WA",-14.88556,126.35986,NA
+"NA_CCM1424_Ct_ehma",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","ehmanni","ehmanni","Australia","Potts woodland","WA",-16.4984,125.3554,NA
+"NA_CCM1425_Ct_ehma",9.998e-05,0.9997,9.998e-05,9.998e-05,"cluster_2",0.9997,NA,NA,"no_voucher",NA,"Ctenotus","ehmanni","ehmanni","Australia","Potts riparian","WA",-16.494,125.3417,NA
+"NA_CCM4743_Ct_vert",9.998e-05,9.998e-05,0.9997,9.998e-05,"cluster_3",0.9997,NA,"CCM4743",NA,NA,"Ctenotus","vertebralis","storri","Australia","Litchfield NP Old tabletop track",NA,-13.11195,130.71808,NA
+"NA_CCM4823_Ct_stor",9.998e-05,9.998e-05,0.9997,9.998e-05,"cluster_3",0.9997,NA,"CCM4823",NA,NA,"Ctenotus","storri","storri","Australia","Litchfield NP Lost city track, 2.4km from park rd",NA,-13.17201,130.77732,NA
+"NA_CCM4824_Ct_stor",9.998e-05,9.998e-05,0.9997,9.998e-05,"cluster_3",0.9997,NA,"CCM4824",NA,NA,"Ctenotus","storri","storri","Australia","Litchfield NP Lost city track, 2.4km from park rd",NA,-13.17201,130.77732,NA
+"WAMR_102658_Ct_nasu",9.998e-05,9.998e-05,9.998e-05,0.9997,"cluster_4",0.9997,"WAM_R102658","WAM102658","WAMR_102658","NASUW102658","Ctenotus","nasutus","nasutus","Australia","LITTLE SANDY DESERT","WA",-24.105,120.325,NA
+"WAMR_139414_Ct_nigr",9.99822e-05,0.0160951,9.99822e-05,0.983705,"cluster_4",0.983705,"WAM_R139414","WAM139414","WAMR_139414","NIGRW139414","Ctenotus","nigrilineatus","nigrilineatus","Australia","MEENTHEENA","WA",-21.287,120.459444,NA
+"WAMR_157327_Ct_rufe",9.998e-05,9.998e-05,9.998e-05,0.9997,"cluster_4",0.9997,"WAM_R157327","WAM157327","WAMR_157327",NA,"Ctenotus","rufescens","rufescens","Australia","YANREY","WA",-22.3,114.593056,NA

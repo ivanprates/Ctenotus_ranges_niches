@@ -1,0 +1,5 @@
+cluster,taxon,Freq,label,OTU
+cluster_4,pantherinus,28,pantherinus (1),pantherinus_gr_cluster_4
+cluster_2,pantherinus,8,pantherinus (2),pantherinus_gr_cluster_2
+cluster_3,pantherinus,4,pantherinus (3),pantherinus_gr_cluster_3
+cluster_1,pantherinus,3,pantherinus (4),pantherinus_gr_cluster_1

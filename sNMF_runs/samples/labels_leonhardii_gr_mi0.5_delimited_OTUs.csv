@@ -1,0 +1,13 @@
+cluster,taxon,Freq,label,OTU
+cluster_1,leonhardii,11,leonhardii (1),leonhardii_gr_cluster_1
+cluster_11,leonhardii,6,leonhardii (2),leonhardii_gr_cluster_11
+cluster_3,hebetior,10,hebetior,leonhardii_gr_cluster_3
+cluster_6,pulchellus,5,pulchellus,leonhardii_gr_cluster_6
+cluster_9,greeri,4,greeri,leonhardii_gr_cluster_9
+cluster_12,quattuordecimlineatus,9,quattuordecimlineatus,leonhardii_gr_cluster_12
+cluster_4,astarte,7,astarte,leonhardii_gr_cluster_4
+cluster_2,orientalis,7,orientalis,leonhardii_gr_cluster_2
+cluster_7,olympicus,8,olympicus,leonhardii_gr_cluster_7
+cluster_8,leae,19,leae,leonhardii_gr_cluster_8
+cluster_10,regius,16,regius,leonhardii_gr_cluster_10
+cluster_5,australis,4,australis,leonhardii_gr_cluster_5
