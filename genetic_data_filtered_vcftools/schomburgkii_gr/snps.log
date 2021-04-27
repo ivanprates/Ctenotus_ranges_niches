@@ -1,0 +1,13 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/ivan/Dropbox/Science/MYPAPERS_ongoing/heterozygosity/ipyrad_outfiles/ms0.4/schomburgkii_gr_n101_ms04_outfiles/schomburgkii_gr_n101_ms04.vcf
+	--out snps
+	--recode
+
+After filtering, kept 101 out of 101 Individuals
+Outputting VCF file...
+After filtering, kept 40203 out of a possible 40203 Sites
+Run Time = 9.00 seconds

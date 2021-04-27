@@ -1,0 +1,14 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf usnps.vcf
+	--012
+	--out usnps
+
+After filtering, kept 11 out of 11 Individuals
+Writing 012 matrix files ... 	012: Only outputting biallelic loci.
+Done.
+After filtering, kept 12530 out of a possible 12530 Sites
+Run Time = 0.00 seconds

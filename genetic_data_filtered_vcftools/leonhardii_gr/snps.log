@@ -1,0 +1,13 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/ivan/Dropbox/Science/MYPAPERS_ongoing/heterozygosity/ipyrad_outfiles/ms0.4/leonhardii_gr_n133_ms04_outfiles/leonhardii_gr_n133_ms04.vcf
+	--out snps
+	--recode
+
+After filtering, kept 133 out of 133 Individuals
+Outputting VCF file...
+After filtering, kept 53490 out of a possible 53490 Sites
+Run Time = 19.00 seconds
