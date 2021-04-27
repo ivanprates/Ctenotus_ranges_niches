@@ -14,21 +14,9 @@ The following information is provided:
 
 5. Outputs from phylogenetic, genetic structure, and OTU delimitation analyses;
 
-<<<<<<< HEAD
 6. Outputs and intermediate files generated during the estimation of geographic range size and climatic niche breadth for Australian squamate taxa and _Ctenotus_ OTUs;
 
 7. Outputs and intermediate files generated during the estimation of genetic isolation-by-distance and expected heterozygosity for _Ctenotus_ OTUs;
-=======
-<<<<<<< HEAD
-6. Outputs and intermediate files generated during the estimation of geographic range size and climatic niche breadth for Australian squamate taxa and _Ctenotus_ OTUs;
-
-7. Outputs and intermediate files generated during the estimation of genetic isolation-by-distance and expected heterozygosity for _Ctenotus_ OTUs;
-=======
-6. Outputs and intermediate files generated during the estimation of geographic range size and climatic niche breadth for Australian squamate taxa and Ctenotus OTUs;
-
-7. Outputs and intermediate files generated during the estimation of genetic isolation-by-distance and expected heterozygosity for Ctenotus OTUs;
->>>>>>> af338deb18d3bad50da072e6136480a7c3fdaa9b
->>>>>>> 8f5911b959b2664b7c292c93dee062039720391d
 
 8. Plots, manuscript figures, and supplementary figures.
 
